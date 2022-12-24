@@ -1,5 +1,11 @@
+import Form from './components/Form';
+
 function App() {
-  return <main>Starter Page</main>;
+  return (
+    <main className='main'>
+      <Form />
+    </main>
+  );
 }
 
 export default App;

@@ -1,0 +1,45 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 400px;
+  margin-top: 100px;
+  border: 1px solid grey;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: rgb(237, 237, 237);
+
+  &__email,
+  &__password,
+  &__submit {
+    display: block;
+    border: 1px solid grey;
+    background-color: white;
+    padding: 5px;
+    line-height: 1.7;
+    margin: 5px 0;
+    border-radius: 5px;
+    align-self: flex-end;
+  }
+
+  &__email,
+  &__password {
+    width: 100%;
+  }
+
+  &__submit {
+    text-align: center;
+    transition: 0.5s;
+    padding: 5px 30px;
+    align-self: center;
+  }
+
+  &__submit:hover {
+    background-color: rgb(108, 108, 254);
+    color: white;
+  }
+
+  &__submit:active {
+    scale: 1.05;
+  }
+}
