@@ -15,7 +15,6 @@ const SignUp = () => {
   };
 
   return (
-    <>
       <form id="form-signup" className="form" onSubmit={handleSubmit}>
         <h1 className="form-header">Sign Up</h1>
         <label name="email">
@@ -42,7 +41,6 @@ const SignUp = () => {
           <span className="button__title">Submit</span>
         </button>
       </form>
-    </>
   );
 };
 

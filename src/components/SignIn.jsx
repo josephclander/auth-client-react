@@ -15,34 +15,28 @@ const SignIn = () => {
   };
 
   return (
-    <>
-      <form id="form-signin" className="form" onSubmit={handleSubmit}>
-        <h1 className="form-header">Sign In</h1>
-        <label name="email">
-          {' '}
-          Email:
-          <input className="form__email" type="email" ref={inputEmail} />
-        </label>
-        <label name="password">
-          {' '}
-          Password:
-          <input
-            className="form__password"
-            type="password"
-            ref={inputPassword}
-          />
-        </label>
-        <button
-          onSubmit={handleSubmit}
-          type="submit"
-          form="form-signin"
-          value="submit"
-          className="button"
-        >
-          <span className="button__title">Submit</span>
-        </button>
-      </form>
-    </>
+    <form id="form-signin" className="form" onSubmit={handleSubmit}>
+      <h1 className="form-header">Sign In</h1>
+      <label name="email">
+        {' '}
+        Email:
+        <input className="form__email" type="email" ref={inputEmail} />
+      </label>
+      <label name="password">
+        {' '}
+        Password:
+        <input className="form__password" type="password" ref={inputPassword} />
+      </label>
+      <button
+        onSubmit={handleSubmit}
+        type="submit"
+        form="form-signin"
+        value="submit"
+        className="button"
+      >
+        <span className="button__title">Submit</span>
+      </button>
+    </form>
   );
 };
 

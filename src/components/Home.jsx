@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom';
 
-const NotFound = () => {
+const Home = () => {
   return (
-    <div className="not-found">
-      <h1 className="not-found__header">Page Not Found</h1>
-      <p className="not-found__message">Sorry that address doesn't exist.</p>
+    <div className="home">
+      <h1>Welcome 👋</h1>
       <ul className="navlist">
         <Link className="button" to="/">
           <span className="button__title">Home</span>
@@ -20,4 +19,4 @@ const NotFound = () => {
   );
 };
 
-export default NotFound;
+export default Home;

@@ -9,8 +9,7 @@
   background-color: rgb(237, 237, 237);
 
   &__email,
-  &__password,
-  &__submit {
+  &__password {
     display: block;
     border: 1px solid grey;
     background-color: white;
@@ -24,21 +23,5 @@
   &__email,
   &__password {
     width: 100%;
-  }
-
-  &__submit {
-    text-align: center;
-    transition: 0.5s;
-    padding: 5px 30px;
-    align-self: center;
-  }
-
-  &__submit:hover {
-    background-color: rgb(108, 108, 254);
-    color: white;
-  }
-
-  &__submit:active {
-    scale: 1.05;
   }
 }
