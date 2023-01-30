@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 const SignUp = () => {
   const inputEmail = useRef(null);
@@ -15,6 +16,7 @@ const SignUp = () => {
   };
 
   return (
+    <div className='form__container'>
       <form id="form-signup" className="form" onSubmit={handleSubmit}>
         <h1 className="form-header">Sign Up</h1>
         <label name="email">
@@ -41,6 +43,18 @@ const SignUp = () => {
           <span className="button__title">Submit</span>
         </button>
       </form>
+      <ul className="navlist">
+        <Link className="button" to="/">
+          <span className="button__title">Home</span>
+        </Link>
+        <Link className="button" to="/signup">
+          <span className="button__title">Sign Up</span>
+        </Link>
+        <Link className="button" to="/signin">
+          <span className="button__title">Sign In</span>
+        </Link>
+      </ul>
+    </div>
   );
 };
 
