@@ -1,0 +1,11 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+}

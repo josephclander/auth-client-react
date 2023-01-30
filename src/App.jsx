@@ -1,9 +1,16 @@
-import Form from './components/Form';
+import SignUp from './components/SignUp';
+import SignIn from './components/SignIn';
+import NotFound from './components/NotFound';
 
+import { Route, Routes } from 'react-router-dom';
 function App() {
   return (
-    <main className='main'>
-      <Form />
+    <main className="main">
+      <Routes>
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path='*' element={<NotFound />} />
+      </Routes>
     </main>
   );
 }
