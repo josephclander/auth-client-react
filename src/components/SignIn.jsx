@@ -1,17 +1,27 @@
 import { useRef } from 'react';
 
-const SignIn = () => {
+const SignIn = ({ navigate }) => {
   const inputEmail = useRef(null);
   const inputPassword = useRef(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = {
-      email: inputEmail.current?.value,
-      password: inputPassword.current?.value,
-    };
+    const response = await fetch('http://localhost:3000/auth/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'include',
+      mode: 'cors',
+      body: JSON.stringify({
+        email: inputEmail.current.value,
+        password: inputPassword.current.value,
+      }),
+    });
     e.target.reset();
-    console.log({ data });
+    if (response.status === 200) {
+      const json = await response.json();
+      console.log(json.message);
+      navigate('/secret');
+    }
   };
 
   return (
