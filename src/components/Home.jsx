@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+import ViteImg from '../assets/ViteImg';
+import SassImg from '../assets/SassImg';
+import ReactImg from '../assets/ReactImg';
 
 const Home = () => {
   return (
@@ -7,6 +9,11 @@ const Home = () => {
       <p className="home__blurb">
         This app demonstrates using authorisation with React, Vite and Sass.
       </p>
+      <div className="company-icons">
+        <ReactImg />
+        <ViteImg />
+        <SassImg />
+      </div>
     </div>
   );
 };
