@@ -5,7 +5,7 @@ import NotFound from './components/NotFound';
 import Secret from './components/Secret';
 import Navbar from './components/Navbar';
 
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 function App() {
   return (
     <>
@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/secret" element={<Secret />} />
-          <Route path="/signup" element={<SignUp />} />
+          <Route path="/signup" element={<SignUp navigate={useNavigate()} />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

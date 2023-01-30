@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 
-const SignUp = () => {
+const SignUp = ({ navigate }) => {
   const inputEmail = useRef(null);
   const inputPassword = useRef(null);
 
@@ -20,6 +20,7 @@ const SignUp = () => {
     if (response.status === 200) {
       const json = await response.json();
       console.log(json.message);
+      navigate('/secret');
     }
   };
 
