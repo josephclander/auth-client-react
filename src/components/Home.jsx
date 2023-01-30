@@ -14,6 +14,9 @@ const Home = () => {
         <ViteImg />
         <SassImg />
       </div>
+      <p>
+        Try using the navigation buttons <span className="home__pointing-icon">☝️</span>
+      </p>
     </div>
   );
 };
