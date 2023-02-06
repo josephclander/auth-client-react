@@ -13,7 +13,7 @@ function App() {
       <main className="main">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/secret" element={<Secret />} />
+          <Route path="/secret" element={<Secret navigate={useNavigate()} />} />
           <Route path="/signup" element={<SignUp navigate={useNavigate()} />} />
           <Route path="/signin" element={<SignIn navigate={useNavigate()} />} />
           <Route path="*" element={<NotFound />} />
