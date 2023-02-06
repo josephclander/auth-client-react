@@ -13,6 +13,9 @@ const Navbar = () => {
         <Link className="button" to="/signin">
           <span className="button__title">Sign In</span>
         </Link>
+        <Link className="button" to="/signout">
+          <span className="button__title">Sign Out</span>
+        </Link>
         <Link className="button" to={`/secret`}>
           <span className="button__title">Secret</span>
         </Link>
