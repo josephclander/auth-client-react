@@ -5,12 +5,15 @@ const Secret = ({ navigate }) => {
 
   useEffect(() => {
     async function checkAuth() {
-      const response = await fetch('http://localhost:3000/auth/status', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        credentials: 'include',
-        mode: 'cors',
-      });
+      const response = await fetch(
+        'https://authwcookies.onrender.com/auth/status',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          credentials: 'include',
+          mode: 'cors',
+        }
+      );
       if (response.status === 200) {
         const json = await response.json();
         console.log(json);

@@ -6,16 +6,19 @@ const SignIn = ({ navigate }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch('http://localhost:3000/auth/login', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      credentials: 'include',
-      mode: 'cors',
-      body: JSON.stringify({
-        email: inputEmail.current.value,
-        password: inputPassword.current.value,
-      }),
-    });
+    const response = await fetch(
+      'https://authwcookies.onrender.com/auth/login',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        mode: 'cors',
+        body: JSON.stringify({
+          email: inputEmail.current.value,
+          password: inputPassword.current.value,
+        }),
+      }
+    );
     e.target.reset();
     if (response.status === 200) {
       const json = await response.json();

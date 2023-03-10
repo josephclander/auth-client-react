@@ -3,12 +3,15 @@ import { useEffect } from 'react';
 const SignOut = ({ navigate }) => {
   useEffect(() => {
     async function signOut() {
-      const response = await fetch('http://localhost:3000/auth/logout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        credentials: 'include',
-        mode: 'cors',
-      });
+      const response = await fetch(
+        'https://authwcookies.onrender.com/auth/logout',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          credentials: 'include',
+          mode: 'cors',
+        }
+      );
       if (response.status === 200) {
         const json = await response.json();
         console.log(json);
